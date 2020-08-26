@@ -6,6 +6,7 @@ import Listen from '../../pages/listen'
 import Mine from '../../pages/mine'
 import Login from '../../pages/login'
 import Reg from '../../pages/reg'
+import Report from '../../pages/mine/report'
 import NoPage from '../../pages/no-page'
 export default function Router() {
     return (
@@ -16,6 +17,7 @@ export default function Router() {
                 <Route exact path="/user" render={()=><TabBar><Mine/></TabBar>}/>
                 <Route exact path="/login" render={()=><Login/>}/>
                 <Route exact path="/reg" render={()=><Reg/>}/>
+                <Route exact path="/report" render={()=><Report/>}/>
                 <Redirect exact from="/" to="home"/>
                 <Route component={NoPage}/>
             </Switch>
