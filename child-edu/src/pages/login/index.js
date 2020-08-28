@@ -1,24 +1,26 @@
 import React, { Component } from "react";
 import { Button, WhiteSpace, Flex } from "antd-mobile";
 import "./login.css";
-import img from "./image/01.PNG"
-import img01 from "./image/u539.png"
-import img02 from "./image/u58.png"
-import img03 from "./image/u65.png"
-import img04 from "./image/u79.png"
-import img05 from "./image/u83.png"
-
+import img from "./image/01.PNG";
+import img01 from "./image/u539.png";
+import img02 from "./image/u58.png";
+import img03 from "./image/u65.png";
+import img04 from "./image/u79.png";
+import img05 from "./image/u83.png";
 
 export default class Login extends Component {
-    
-  
-    render() {
+  constructor(props) {
+    super(props);
+  }
+  handleClick = () => this.props.history.push("/reg");
+
+  handleToClick = () => this.props.history.push("/home");
+
+
+  render() {
     return (
       <div>
-        <img
-          src={img01}
-          style={{ display: "block", margin: "15% auto" }}
-        />
+        <img src={img01} style={{ display: "block", margin: "15% auto" }} />
         <div style={{ marginTop: "20%", padding: "0 10%" }}>
           <div
             style={{
@@ -67,8 +69,8 @@ export default class Login extends Component {
           </div>
           <WhiteSpace size={"lg"} />
           <a className="mima">忘记密码？</a>
-          <Button
-            onClick={this.login}
+          
+          <Button onClick={this.handleToClick}
             style={{
               background: "#50CC94",
               color: "#fff",
@@ -79,8 +81,11 @@ export default class Login extends Component {
           >
             登陆
           </Button>
+         
           <WhiteSpace size={"xl"} />
-          <a className="reg">立即注册</a>
+          <p className="reg" onClick={this.handleClick}>
+            立即注册
+          </p>
           <Flex
             style={{
               width: "100%",
@@ -128,7 +133,7 @@ export default class Login extends Component {
                   lineHeight: "30px",
                 }}
               >
-                <img src={img} style={{width:"15px", height:"15px"}}/>
+                <img src={img} style={{ width: "15px", height: "15px" }} />
               </div>
             </Flex.Item>
             <Flex.Item style={{ flex: 0.33 }}>

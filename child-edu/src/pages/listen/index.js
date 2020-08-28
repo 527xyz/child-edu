@@ -11,6 +11,7 @@ import img07 from "./image/u497.png";
 import img08 from "./image/u502.png";
 import img09 from "./image/u508.png";
 import img10 from "./image/u514.png";
+import img_left from '../../assets/img/ipt_left.jpg'
 
 export default class Listen extends Component {
   state = {
@@ -102,7 +103,7 @@ export default class Listen extends Component {
   };
 
   goTo = (id) =>{
-    this.props.history.push('/')
+    this.props.history.push('/listenlist/ + id')
   }
 
   render() {
@@ -116,7 +117,7 @@ export default class Listen extends Component {
               textAlign: "center",
             }}
           >
-            <Flex.Item style={{ flex: 0.2 }}>LOGO</Flex.Item>
+            <Flex.Item style={{ flex: 0.2 }}><img src={img_left} alt="" style={{width:"30px", height:"30px"}}/></Flex.Item>
             <Flex.Item style={{ flex: 0.6 }}>
               <SearchBar placeholder="搜索绘本" maxLength={8} />
             </Flex.Item>
@@ -260,7 +261,7 @@ export default class Listen extends Component {
                   width: "40%",
                   marginLeft: "5%",
                   height: "200px",
-                  background: "white",
+                  background: "#F5F5F5",
                   borderRadius: "10px",
                 }}
               >

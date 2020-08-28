@@ -1,0 +1,55 @@
+.header {
+  padding: 0 10px;
+  .back {
+    color: #474747;
+    font-size: 24px;
+    float: left;
+    padding-top: 8px;
+  }
+
+  .tit {
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    line-height: 45px;
+  }
+}
+
+div.tabs {
+  font-family: "Arial" !important;
+  .am-tabs {
+    color: #999;
+    .am-tabs-default-bar-tab {
+      .am-badge {
+        font-size: 12px;
+      }
+    }
+    .am-tabs-default-bar-tab-active {
+        
+      .am-badge {
+        font-size: 14px;
+        font-weight: bold;
+        color: #333;
+      }
+      
+    }
+    .am-tabs-default-bar-underline{
+        border: 1px #52D5AA solid;
+      }
+    .article_list {
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      .list_box {
+        display: flex;
+        flex-direction: column;
+        margin: 0 3px 10px;
+        .book_tit {
+          padding-left: 10px;
+          font-size: 12px !important;
+          color: #333;
+        }
+      }
+    }
+  }
+}

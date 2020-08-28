@@ -17,7 +17,13 @@ import img13 from "./image/u893.png";
 import img14 from "./image/u898.png";
 
 export default class Mine extends Component {
+  constructor(props){
+    super(props)
+  }
   
+  handleClick=()=>this.props.history.push('/report')
+
+
     render() {
     return (
       <div style={{ height: "120vh", width: "100vw", backgroundColor: "white" }}>
@@ -114,7 +120,7 @@ export default class Mine extends Component {
         <div style={{width:"100%", height:"4px", background:"#F2F2F2", marginTop:"325px"}}></div>
 
         <WingBlank>
-        <div style={{width:"100%", height:"50px", lineHeight:"50px", borderBottom:"1px solid #cccccc", position:"relative"}}>
+        <div style={{width:"100%", height:"50px", lineHeight:"50px", borderBottom:"1px solid #cccccc", position:"relative"}} onClick={this.handleClick}>
               <img src={img11}/>
               <span style={{marginLeft:"3%"}}>阅读报告</span>
               <span style={{position:"absolute", right:"0px"}}>&gt;</span>

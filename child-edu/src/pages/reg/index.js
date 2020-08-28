@@ -1,19 +1,20 @@
-import React from "react";
+import React, { Component } from "react";
 import { Icon, NavBar, Button, WhiteSpace } from "antd-mobile";
 import img01 from "./image/u179.png"
 import img02 from "./image/u58.png"
 import img03 from "./image/u65.png"
 import img04 from "./image/u539.png"
 
-export default function Reg() {
+export default class Reg extends Component {
     
+  render(){
     return (
     <div>
       <NavBar
         style={{ background: "none" }}
         mode="light"
         icon={<Icon type="left" />}
-        //   onLeftClick={() => history.go(-1)}
+        onLeftClick={() => {this.props.history.goBack()}}
       />
       <img
         src={img04}
@@ -101,7 +102,7 @@ export default function Reg() {
         </div>
         <WhiteSpace size={"xl"} />
 
-        <Button onClick={()=>{this.props.history.push('/login')}}
+        <Button
           style={{
             background: "#50CC94",
             color: "#fff",
@@ -115,4 +116,5 @@ export default function Reg() {
       </div>
     </div>
   );
+}
 }

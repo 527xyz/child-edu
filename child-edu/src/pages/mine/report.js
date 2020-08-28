@@ -7,6 +7,10 @@ import 'echarts/lib/component/tooltip';
 import 'echarts/lib/component/title';
 
 export default class Report extends Component {
+    constructor(props){
+      super(props)
+    }
+
     componentDidMount() {
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('main'));
@@ -51,7 +55,7 @@ export default class Report extends Component {
         <NavBar
           mode="light"
           icon={<Icon type="left" />}
-          onLeftClick={() => console.log("onLeftClick")}
+          onLeftClick={() => {this.props.history.goBack()}}
         >
           阅读报告
         </NavBar>
